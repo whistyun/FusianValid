@@ -31,7 +31,7 @@ public class MainWindowViewModel : INotifyPropertyChanged, IValidationContextHol
 		ValidationContext.Add(
 			"must input any word",
 			nameof(Keyword),
-			Validators.NotNullOrEmpty)/
+			Validators.NotNullOrEmpty);
 	}
 }
 ```
@@ -54,7 +54,7 @@ public class MainWindowViewModel : INotifyPropertyChanged, IValidationContextHol
 	<StackPanel>
 
         <TextBox Text="{Binding Directory}" />
-		<fsnv:ErrorTextBlock Path="Directory"/>
+        <fsnv:ErrorTextBlock Path="Directory"/>
 
         <TextBox Text="{fsnv:BindingWithError Keyword}"/>
 	
